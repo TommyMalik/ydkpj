@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+<div class="main">
+    <nav>
+        <ul class="nav-left">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT ME</a></li>
+          <li><a href="#">SHOP</a></li>
+        </ul>
+    
+        <div class="logo">
+          J-U-D-A-H
+        </div>
+    
+        <ul class="nav-right">
+          <li><a href="#">SPOTIFY</a></li>
+          <li><a href="#">APPLE MUSIC</a></li>
+          <li><a href="#">DEEZER</a></li>
+        </ul>
+      </nav>
+
+      <div id="app" class="carousel" style="background-image: url(/pjblack.png);">
+        <div class="cursor" id="cursor"></div>
+
+        <button class="center-btn">LETS GO!!</button>
+
+        <div class="progress-bar">
+          <div class="progress"></div>
+      </div>
+
+        <div class="social-links">
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="mailto:youremail@example.com">Email</a>
+        </div>
+      </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+<script>
+  // Mobile menu toggle
+  const logo = document.querySelector('.logo');
+  const navLeft = document.querySelector('.nav-left');
+  const navRight = document.querySelector('.nav-right');
+
+  logo.addEventListener('click', () => {
+    navLeft.classList.toggle('show');
+    navRight.classList.toggle('show');
+  });
+
+  const cursor = document.getElementById("cursor");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
+  });
+
+  
+
+</script>
